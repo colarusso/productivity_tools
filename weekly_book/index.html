@@ -22,6 +22,10 @@
       border: 0.5px dashed #ccc;
       font-size:14px;
     }
+    .cover {
+      border: 0.5px solid black;
+      font-size:14px;
+    }
     input {
       width:100%;
     }
@@ -95,7 +99,7 @@
   </div>
 
   <div class="smallpage" style="height:500px;background:#eef">
-    <b>Monday <input id="input0" onChange="write_update('0',this.value);" type="text" value="2020-11-02" style="width:100px;"/></b>
+    <b>Monday <input id="input0" onChange="write_update('0',this.value);" type="text" value="2022-01-17" style="width:100px;"/></b>
     <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0">
       <tr><td align="center" width="20px">&nbsp;</td> <td><input id="input1" onChange="write_update('1',this.value);" type="text"/></td><td width="16px"></td></tr>
       <tr><td align="center">9</td>                   <td><input id="input2" onChange="write_update('2',this.value);" type="text"/></td></tr>
@@ -256,9 +260,9 @@ TO PRINT
   <b>Monday <span id="monday"></span></b>
   <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0">
     <tr><td align="center" width="20px">&nbsp;</td> <td><span id="output1"></span></td><td width="16px"></td></tr>
-    <tr><td align="center">9</td>                   <td><span id="output2"></span></td><td width="16px"></td></tr>
+    <tr><td align="center" style="border-top:1px dashed #000;">9</td><td style="border-top:1px dashed #000;"><span id="output2"></span></td><td width="16px" style="border-top:1px dashed #000;"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output3"></span></td><td width="16px"></td></tr>
-    <tr><td align="center" style="border-top:1px dashed #000;">10</td>                  <td style="border-top:1px dashed #000;"><span id="output4"></span></td><td width="16px"  style="border-top:1px dashed #000;"></td></tr>
+    <tr><td align="center">10</td>                  <td><span id="output4"></span></td><td width="16px"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output5"></span></td><td width="16px"></td></tr>
     <tr><td align="center">11</td>                  <td><span id="output6"></span></td><td width="16px"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output7"></span></td><td width="16px"></td></tr>
@@ -272,8 +276,8 @@ TO PRINT
     <tr><td>&nbsp;</td>                             <td><span id="output15"></span></td><td width="16px"></td></tr>
     <tr><td align="center">4</td>                   <td><span id="output16"></span></td><td width="16px"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output17"></span></td><td width="16px"></td></tr>
-    <tr><td align="center">5</td><td><span id="output18"></span></td><td width="16px"></td></tr>
-    <tr><td style="border-bottom:1px dashed #000;">&nbsp;</td>                             <td style="border-bottom:1px dashed #000;"><span id="output19"></span></td><td width="16px" style="border-bottom:1px dashed #000;"></td></tr>
+    <tr><td align="center" style="border-top:1px dashed #000;">5</td><td style="border-top:1px dashed #000;"><span id="output18"></span></td><td width="16px" style="border-top:1px dashed #000;"></td></tr>
+    <tr><td>&nbsp;</td>                             <td><span id="output19"></span></td><td width="16px"></td></tr>
   </table>
   <font size=-3>T: Total? 1· 2· 3· 4|· 5· 6· 7 Block? 1· 2· 3· 4· 5· 6· 7</font>
 </div>
@@ -348,7 +352,7 @@ TO PRINT
   (W)right/Do after</div>
 <div class="smallpage" style="transform: rotate(180deg);">
   <b>Friday <span id="friday"></span> &amp; The Weekend</b>
-  <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0">
+  <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0;">
     <tr><td align="center" width="20px">&nbsp;</td> <td><span id="output77"></span></td><td width="16px"></td></tr>
     <tr><td style="border-top:1px dashed #000;">9</td><td style="border-top:1px dashed #000;">                              <span id="output78"></span></td style="border-top:1px dashed #000;"><td width="16px"></td></tr>
     <tr><td align="center">&nbsp;</td>              <td align="center"><span id="output79"></span></td><td width="16px"></td></tr>
@@ -388,38 +392,44 @@ TO PRINT
     Log/Checklist
   </center>
   <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0;text-align:center;">
-    <tr><td width="20%">
+    <tr  class="cover"><td width="20%" style="margin:3px 0 5px 0;"  class="cover">
       M
-    </td><td width="20%">
+    </td><td width="20%" class="cover">
       T
-    </td><td width="20%">
+    </td><td width="20%" class="cover">
       W
-    </td><td width="20%">
+    </td><td width="20%" class="cover">
       R
-    </td><td width="20%">
+    </td><td width="20%" class="cover">
       F
     </td></tr>
     <tr><td colspan=5 align="left">
-      Sync w/ Outlook &amp; Calendly
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+      Start of Day (times)
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
-      20 min email-slack-TEAMS triage
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+      Sync w/ Outlook &amp; Calendly
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
+    <tr><td colspan=5 align="left">
+      Email-Slack-TEAMS triage
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
       Load balance &amp; sync <i>To Do</i>
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
       Confirm 3 <i>Must Dos</i> on today's list
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
       Work on <i>To Dos</i> &amp; attend meetings
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
       10 min email triage
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
     <tr><td colspan=5 align="left">
       Load balance &amp; sync <i>To Do</i>
-    </td></tr><tr><td width="20%" height="15px;"> </td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td></tr>
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
+    <tr><td colspan=5 align="left">
+      Worked after hours (y/n)
+    </td></tr><tr><td width="20%" height="15px;" class="cover"> </td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td><td width="20%" class="cover"></td></tr>
   </table>
 </div>
 
@@ -479,9 +489,9 @@ TO PRINT
 <div class="smallpage" style="transform: rotate(180deg);">
   <b>Thursdays <span id="thursday"></span></b>
   <table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin:3px 0 5px 0">
-    <tr><td align="center" width="20px">&nbsp;</td> <td><span id="output58"></span></td><td width="16px"></td></tr>
+    <tr><td align="center" width="20px" style="border-bottom:1px dashed #000;">&nbsp;</td> <td style="border-bottom:1px dashed #000;"><span id="output58"></span></td><td width="16px"></td></tr>
     <tr><td>9</td>                                  <td><span id="output59"></span></td><td width="16px"></td></tr>
-    <tr><td style="border-bottom:1px dashed #000;">&nbsp;</td>                             <td style="border-bottom:1px dashed #000;"><span id="output60"></span></td style="border-bottom:1px dashed #000;"><td width="16px"></td></tr>
+    <tr><td>&nbsp;</td>                             <td><span id="output60"></span></td><td width="16px"></td></tr>
     <tr><td align="center">10</td>                  <td><span id="output61"></span></td><td width="16px"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output62"></span></td><td width="16px"></td></tr>
     <tr><td align="center">11</td>                  <td><span id="output63"></span></td><td width="16px"></td></tr>
@@ -495,9 +505,9 @@ TO PRINT
     <tr><td align="center">3</td>                   <td><span id="output71"></span></td><td width="16px"></td></tr>
     <tr><td>&nbsp;</td>                             <td><span id="output72"></span></td><td width="16px"></td></tr>
     <tr><td align="center">4</td>                   <td><span id="output73"></span></td><td width="16px"></td></tr>
-    <tr><td>&nbsp;</td>                             <td><span id="output74"></span></td><td width="16px"></td></tr>
+    <tr><td style="border-bottom:1px dashed #000;">&nbsp;</td><td style="border-bottom:1px dashed #000;"><span id="output74"></span></td><td width="16px" style="border-bottom:1px dashed #000;"></td></tr>
     <tr><td align="center">5</td>                   <td><span id="output75"></span></td><td width="16px"></td></tr>
-    <tr><td style="border-bottom:1px dashed #000;">&nbsp;</td>                             <td style="border-bottom:1px dashed #000;"><span id="output76"></span></td><td style="border-bottom:1px dashed #000;" width="16px"></td></tr>
+    <tr><td>&nbsp;</td>                             <td><span id="output76"></span></td><td width="16px"></td></tr>
   </table>
   <font size=-3>T: Total? 1· 2· 3· 4|· 5· 6· 7 Block? 1· 2· 3· 4· 5· 6· 7</font>
 </div>
